@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.junya.mapper.SysResourceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.junya.model.SysResource">
+        <id column="UUID" property="uuid" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="sortNo" property="sortNo" />
+        <result column="bizsysId" property="bizsysId" />
+        <result column="parentId" property="parentId" />
+        <result column="level" property="level" />
+        <result column="abbName" property="abbName" />
+        <result column="SysCreateDate" property="SysCreateDate" />
+        <result column="SysCreateBy" property="SysCreateBy" />
+        <result column="SysUpdateDate" property="SysUpdateDate" />
+        <result column="SysUpdateBy" property="SysUpdateBy" />
+        <result column="VersionNum" property="VersionNum" />
+        <result column="SysDelFlag" property="SysDelFlag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        UUID, code, name, sortNo, bizsysId, parentId, level, abbName, SysCreateDate, SysCreateBy, SysUpdateDate, SysUpdateBy, VersionNum, SysDelFlag
+    </sql>
+
+</mapper>

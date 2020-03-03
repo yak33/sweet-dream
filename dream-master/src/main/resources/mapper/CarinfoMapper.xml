@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.junya.dao.CarinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.junya.model.Carinfo">
+        <id column="id" property="id" />
+        <result column="typeid" property="typeid" />
+        <result column="carnum" property="carnum" />
+        <result column="ratedcarload" property="ratedcarload" />
+        <result column="selfcarload" property="selfcarload" />
+        <result column="ratedcubage" property="ratedcubage" />
+        <result column="oilweight" property="oilweight" />
+        <result column="cardriver" property="cardriver" />
+        <result column="status" property="status" />
+        <result column="speedstatus" property="speedstatus" />
+        <result column="carcompanyid" property="carcompanyid" />
+        <result column="pathid" property="pathid" />
+        <result column="worktime" property="worktime" />
+        <result column="carmodel" property="carmodel" />
+        <result column="chezaitype" property="chezaitype" />
+        <result column="zuzhiid" property="zuzhiid" />
+        <result column="gopathid" property="gopathid" />
+        <result column="gpsnum" property="gpsnum" />
+        <result column="tingcheId" property="tingcheId" />
+        <result column="deviceId" property="deviceId" />
+        <result column="fenzu" property="fenzu" />
+        <result column="oilstyle" property="oilstyle" />
+        <result column="tel" property="tel" />
+        <result column="carpadcode" property="carpadcode" />
+        <result column="detailstype" property="detailstype" />
+        <result column="workerid" property="workerid" />
+        <result column="ishuoer" property="ishuoer" />
+        <result column="isacc" property="isacc" />
+        <result column="waterstyle" property="waterstyle" />
+        <result column="videodeviceids" property="videodeviceids" />
+        <result column="driverid" property="driverid" />
+        <result column="IFID_CODE" property="ifidCode" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, typeid, carnum, ratedcarload, selfcarload, ratedcubage, oilweight, cardriver, status, speedstatus, carcompanyid, pathid, worktime, carmodel, chezaitype, zuzhiid, gopathid, gpsnum, tingcheId, deviceId, fenzu, oilstyle, tel, carpadcode, detailstype, workerid, ishuoer, isacc, waterstyle, videodeviceids, driverid, IFID_CODE
+    </sql>
+
+    <select id="getCarinfoByTypeId" resultType="com.junya.model.Carinfo">
+        select
+            <include refid="Base_Column_List" />
+        from carinfo
+        <where>
+            <if test="typeid != null">
+                and typeid = #{typeId}
+            </if>
+        </where>
+    </select>
+
+</mapper>

@@ -1,2 +1,4 @@
 # sweet-dream
-甜蜜的梦，SpringCloud多模块Eureka服务消费者。
+
+#### 介绍
+甜蜜的梦，springboot多模块种子项目。

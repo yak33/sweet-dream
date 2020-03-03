@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.junya.mapper.GyUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.junya.model.GyUser">
+        <id column="UUID" property="uuid" />
+        <result column="UserCode" property="UserCode" />
+        <result column="UserName" property="UserName" />
+        <result column="PassWord" property="PassWord" />
+        <result column="Mobile" property="Mobile" />
+        <result column="DeptCode" property="DeptCode" />
+        <result column="HISUserCode" property="HISUserCode" />
+        <result column="Remark" property="Remark" />
+        <result column="IdentityFlag" property="IdentityFlag" />
+        <result column="SysCreateDate" property="SysCreateDate" />
+        <result column="SysCreateBy" property="SysCreateBy" />
+        <result column="SysUpdateDate" property="SysUpdateDate" />
+        <result column="SysUpdateBy" property="SysUpdateBy" />
+        <result column="VersionNum" property="VersionNum" />
+        <result column="SysDelFlag" property="SysDelFlag" />
+        <result column="alias" property="alias" />
+        <result column="address" property="address" />
+        <result column="email" property="email" />
+        <result column="status" property="status" />
+        <result column="startDate" property="startDate" />
+        <result column="endDate" property="endDate" />
+        <result column="sex" property="sex" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        UUID, UserCode, UserName, PassWord, Mobile, DeptCode, HISUserCode, Remark, IdentityFlag, SysCreateDate, SysCreateBy, SysUpdateDate, SysUpdateBy, VersionNum, SysDelFlag, alias, address, email, status, startDate, endDate, sex
+    </sql>
+
+</mapper>
